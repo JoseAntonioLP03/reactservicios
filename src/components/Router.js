@@ -5,6 +5,7 @@ import TablaMultiplicar from './TablaMultiplicar'
 import Home from './Home'
 import NotFound from './NotFound'
 import Collage from './Collage'
+import MenuRutas from './MenuRutas'
 
 export default class Router extends Component {
     render() {
@@ -22,6 +23,7 @@ export default class Router extends Component {
         }
         return (
         <BrowserRouter>
+            <MenuRutas/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/collage/:numero' element={<CollageFuncion/>}/>

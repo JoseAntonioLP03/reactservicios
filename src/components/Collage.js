@@ -20,7 +20,11 @@ export default class Collage extends Component {
             numeros: aux
         })
     }
-
+    componentDidUpdate=(oldprops)=>{
+        if(oldprops.numero != this.props.numero){
+            this.generarCollage();
+        }
+    }
     componentDidMount=()=>{
         this.generarCollage();
     }
