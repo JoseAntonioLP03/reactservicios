@@ -6,6 +6,7 @@ import Home from './Home'
 import NotFound from './NotFound'
 import Collage from './Collage'
 import MenuRutas from './MenuRutas'
+import HospitalesMultiples from './HospitalesMultiples'
 
 export default class Router extends Component {
     render() {
@@ -23,9 +24,8 @@ export default class Router extends Component {
         }
         return (
         <BrowserRouter>
-            <MenuRutas/>
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route path='/' element={<HospitalesMultiples/>}/>
                 <Route path='/collage/:numero' element={<CollageFuncion/>}/>
                 <Route path='/tabla/:minumero' element={<TablaMultiplicarElement/>}/>
                 {/* PARA ESCRIBIR LA RUTAS QUE NO EXISTEN CON 404 HAY QUE ESCRIBIR CON * 
